@@ -1,5 +1,6 @@
 import Navbar from "@/components/fraqments/navbar";
 import BGMain from "@/assets/Background.jpg";
+import FlatWritting from "@/assets/flat-writting.svg";
 import Image from "next/image";
 import { AnchorButton } from "@/components/fraqments/button";
 import BigCard from "@/components/fraqments/card/bigCard";
@@ -11,15 +12,16 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <section className="w-full flex flex-col items-center">
-        <Image
+      <Image
           src={BGMain.src}
           width={4000}
           height={4000}
           className="w-full h-auto absolute -z-10 -top-2"
           alt=""
         />
-        <h1 className="text-center text-primary text-5xl leading-relaxed font-extrabold mt-24">
+      <section className="w-full pt-10 md:pt-0 px-4 flex flex-col items-center">
+       
+        <h1 className="text-center text-primary text-4xl md:text-5xl leading-relaxed font-extrabold mt-24">
           Riset Kini, Inovasi Esok, <br></br> Masa Depan
           <span className="text-gold"> Emas</span>
         </h1>
@@ -27,7 +29,7 @@ export default async function Home() {
           Platform belajar riset ilmiah, karya tulis ilmiah, dan pencarian
           call-for-paper
         </p>
-        <div className="flex gap-4 mt-8 justify-between">
+        <div className="flex flex-col md:flex-row gap-4 mt-8 justify-between">
           <AnchorButton href="/publikasi/" variant="secondary" size="lg">
             Publikasi
           </AnchorButton>
@@ -44,7 +46,7 @@ export default async function Home() {
         <h2 className="text-primary text-3xl font-bold text-center">
           Publikasikan Karya Anda
         </h2>
-        <div className="w-full flex flex-wrap mt-10 justify-center gap-16">
+        <div className="w-full flex flex-col md:flex-row flex-wrap mt-10 justify-center gap-16">
           {(await getAllPublication()).map((publication) => (
             <PublicationCard {...publication} />
           ))}
@@ -62,10 +64,19 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mt-20">
-        <h1 className="text-primary text-3xl font-bold text-center">
-          Belajar Penulisan Karya Ilmiah dengan menulis langsung!
-        </h1>
+      <section className="mt-20 px-8 md:px-16">
+      <div className="flex flex-col gap-4">
+        <h1 className="text-primary text-3xl font-bold ">
+            Belajar Penulisan Karya Ilmiah dengan menulis langsung!
+          </h1>
+          <p>
+            Belajar menulis karya ilmiah dengan menulis langsung dan didukung dengan feedback AI.
+          </p>
+          <AnchorButton href="/publikasi/" variant="primary" size="lg">
+            Belajar Langsung
+          </AnchorButton>
+      </div>
+      <Image src={FlatWritting.src} width={200} height={200} alt="" className="w-full mt-5 md:mt-0 md:w-1/4 h-auto" />
       </section>
     </>
   );
