@@ -15,7 +15,7 @@ export interface Publication {
   cateogry: string;
 }
 
-const URL = BASE_URL + "publications.json";
+const URL = BASE_URL + ".json";
 
 export async function getAllPublication(
   limit: number = 4

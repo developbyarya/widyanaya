@@ -7,16 +7,16 @@ import { BsJustify } from "react-icons/bs";
 
 export default function Navbar(): React.ReactNode {
   return (
-    <nav className="flex flex-col absolute md:flex-row justify-between w-full items-center z-50 h-20 pt-4 gap-8 px-20">
+    <nav className="flex flex-col absolute md:flex-row justify-center lg:justify-between w-full items-center z-50 h-20 pt-4 gap-8 px-20">
       <Image
         src={WidyanayaLogo.src}
         alt="widyanaya logo"
         width={150}
         height={60}
-        className="w-auto h-16"
+        className="w-auto h-10 lg:h-16"
       />
-      <div className="hidden md:flex w-full p-4">
-        <div className="flex  md:flex-row gap-4">
+      <div className="hidden lg:flex w-full p-4">
+        <div className="flex  lg:flex-row gap-4">
           <a href="#">Home</a>
           <a href="#">Publikasi Jurnal</a>
           <a href="#">Lomba KTI</a>

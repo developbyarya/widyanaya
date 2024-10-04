@@ -21,11 +21,11 @@ export default async function Home() {
         />
       <section className="w-full pt-10 md:pt-0 px-4 flex flex-col items-center">
        
-        <h1 className="text-center text-primary text-4xl md:text-5xl leading-relaxed font-extrabold mt-24">
+        <h1 className="text-center text-primary text-4xl lg:text-5xl leading-relaxed font-extrabold mt-24">
           Riset Kini, Inovasi Esok, <br></br> Masa Depan
           <span className="text-gold"> Emas</span>
         </h1>
-        <p className="text-gray-600 text-center">
+        <p className="text-gray-600 text-center mt-6">
           Platform belajar riset ilmiah, karya tulis ilmiah, dan pencarian
           call-for-paper
         </p>
@@ -46,7 +46,7 @@ export default async function Home() {
         <h2 className="text-primary text-3xl font-bold text-center">
           Publikasikan Karya Anda
         </h2>
-        <div className="w-full flex flex-col md:flex-row flex-wrap mt-10 justify-center gap-16">
+        <div className="w-full flex flex-col lg:flex-row flex-wrap mt-10 justify-center gap-16">
           {(await getAllPublication()).map((publication) => (
             <PublicationCard {...publication} />
           ))}
@@ -57,7 +57,7 @@ export default async function Home() {
         <h1 className="text-primary text-3xl font-bold text-center">
           Ujikan karya anda, ikuti lomba KTI
         </h1>
-        <div className="w-full flex flex-wrap mt-10 justify-center gap-16">
+        <div className="w-full flex flex-col lg:flex-row flex-wrap mt-10 justify-center gap-16">
           {(await getAllPublication()).map((publication) => (
             <PublicationCard {...publication} />
           ))}
@@ -76,7 +76,7 @@ export default async function Home() {
             Belajar Langsung
           </AnchorButton>
       </div>
-      <Image src={FlatWritting.src} width={200} height={200} alt="" className="w-full mt-5 md:mt-0 md:w-1/4 h-auto" />
+      <Image src={FlatWritting.src} width={200} height={200} alt="" className="w-full mt-5 lg:mt-0 lg:w-1/4 h-auto" />
       </section>
     </>
   );
