@@ -1,3 +1,4 @@
+import { saveMetadata } from "@/model/metadata";
 import { getPublicationById } from "@/model/publication";
 import Image from "next/image";
 
@@ -5,7 +6,7 @@ export default async function Page({params : {id}} : {params: {id: number}}) {
     const pubInfo = await getPublicationById(id);
     return <div className="flex w-full flex-col items-center justify-center min-h-screen bg-gray-100"> 
       <h1 className="my-6 text-3xl font-extrabold">Submit Your Article</h1>
-      <div className="flex w-full gap-16 items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex flex-col lg:flex-row w-full gap-16 items-center justify-center min-h-screen bg-gray-100">
     
       <div className="w-fit flex gap-4 items-center">
         <Image src={pubInfo.cover_url} alt="Journal Cover" width={200} height={400} className="w-28 h-auto" />
@@ -13,7 +14,7 @@ export default async function Page({params : {id}} : {params: {id: number}}) {
           <h3 className="text-lg font-bold">{pubInfo.title}</h3>
         </div>
       </div>
-      <form className="w-1/2 p-8 bg-white rounded shadow-md">
+      <form action={saveMetadata} className="w-1/2 p-8 bg-white rounded shadow-md">
         <div className="mb-4">
           <label htmlFor="title" className="block mb-2 text-sm font-medium text-gray-700">Title:</label>
           <input 
