@@ -1,6 +1,6 @@
 import { BASE_URL } from "./base";
 
-interface Lomba {
+export interface Lomba {
   id: number;
   name: string;
   description: string;
@@ -9,13 +9,16 @@ interface Lomba {
   fees: number;
   caterogy: number;
   publisher_id: number;
+  cover_url: string;
 }
 
 const URL = BASE_URL + "Lomba.json";
 
 export async function getAllLomba(limit: number = 4): Promise<Lomba[]> {
   // CHANGE ON PRODUCTION (DUMMY)!
-  const data: Lomba[] = await (await fetch(URL)).json();
+  const data = await fetch(URL, { next: { revalidate: 0 } })
+  const response: Lomba[] = await data.json();
+  console.log(data);
 
-  return data.slice(0, 4);
+  return response.slice(0, limit);
 }

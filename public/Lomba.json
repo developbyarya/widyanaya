@@ -1,0 +1,70 @@
+[
+    {
+      "id": 1,
+      "name": "Journal of Machine Learning Research",
+      "description": "A leading journal in machine learning, artificial intelligence, and related fields.",
+      "opening_date": "2024-01-01",
+      "closing_date": "2024-05-01",
+      "fees": 150,
+      "publisher_id": 101,
+      "cateogry": "Machine Learning",
+      "cover_url": "https://scholar.google.com/citations?view_op=medium_photo&user=HYmBkYYAAAAJ&citpid=2"
+    },
+    {
+      "id": 2,
+      "name": "Nature Geoscience",
+      "description": "A journal covering all aspects of the Earth sciences, with a focus on recent discoveries.",
+      "volume": 17,
+      "year": 2023,
+      "opening_date": "2023-06-15",
+      "closing_date": "2023-12-15",
+      "fees": 200,
+      "review_est": 60,
+      "publisher_id": 102,
+      "cateogry": "Geoscience",
+      "cover_url": "https://scholar.google.com/citations?view_op=medium_photo&user=HYmBkYYAAAAJ&citpid=2"
+    },
+    {
+      "id": 3,
+      "name": "IEEE Transactions on Neural Networks and Learning Systems",
+      "description": "Covers theoretical and practical aspects of neural networks and machine learning systems.",
+      "volume": 35,
+      "year": 2024,
+      "opening_date": "2024-03-01",
+      "closing_date": "2024-07-01",
+      "fees": 175,
+      "review_est": 90,
+      "publisher_id": 103,
+      "cateogry": "Neural Networks",
+      "cover_url": "https://scholar.google.com/citations?view_op=medium_photo&user=HYmBkYYAAAAJ&citpid=2"
+    },
+    {
+      "id": 4,
+      "name": "Journal of Finance",
+      "description": "Published by the American Finance Association, focusing on research in finance and financial economics.",
+      "volume": 79,
+      "year": 2024,
+      "opening_date": "2024-02-01",
+      "closing_date": "2024-06-01",
+      "fees": 250,
+      "review_est": 120,
+      "publisher_id": 104,
+      "cateogry": "Finance",
+      "cover_url": "https://scholar.google.com/citations?view_op=medium_photo&user=HYmBkYYAAAAJ&citpid=2"
+    },
+    {
+      "id": 5,
+      "name": "Journal of Chemical Education",
+      "description": "A journal dedicated to research on teaching and learning in the chemical sciences.",
+      "volume": 101,
+      "year": 2023,
+      "opening_date": "2023-09-01",
+      "closing_date": "2023-12-01",
+      "fees": 100,
+      "review_est": 60,
+      "publisher_id": 105,
+      "cateogry": "Chemistry",
+      "cover_url": "https://scholar.google.com/citations?view_op=medium_photo&user=HYmBkYYAAAAJ&citpid=2"
+    }
+  ]
+  

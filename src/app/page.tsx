@@ -33,10 +33,10 @@ export default async function Home() {
           <AnchorButton href="/publikasi/" variant="secondary" size="lg">
             Publikasi
           </AnchorButton>
-          <AnchorButton href="/publikasi/" variant="primary" size="lg">
+          <AnchorButton href="/tulis/" variant="primary" size="lg">
             Tulis Karya
           </AnchorButton>
-          <AnchorButton href="/publikasi/" variant="secondary" size="lg">
+          <AnchorButton href="/lomba/" variant="secondary" size="lg">
             Lomba KTI
           </AnchorButton>
         </div>
@@ -48,7 +48,7 @@ export default async function Home() {
         </h2>
         <div className="w-full flex flex-col lg:flex-row flex-wrap mt-10 justify-center gap-16">
           {(await getAllPublication()).map((publication) => (
-            <PublicationCard {...publication} />
+            <PublicationCard {...publication} key={publication.id}/>
           ))}
         </div>
       </section>
@@ -59,24 +59,24 @@ export default async function Home() {
         </h1>
         <div className="w-full flex flex-col lg:flex-row flex-wrap mt-10 justify-center gap-16">
           {(await getAllPublication()).map((publication) => (
-            <PublicationCard {...publication} />
+            <PublicationCard {...publication} key={publication.id} />
           ))}
         </div>
       </section>
 
-      <section className="mt-20 px-8 md:px-16">
-      <div className="flex flex-col gap-4">
-        <h1 className="text-primary text-3xl font-bold ">
-            Belajar Penulisan Karya Ilmiah dengan menulis langsung!
-          </h1>
-          <p>
-            Belajar menulis karya ilmiah dengan menulis langsung dan didukung dengan feedback AI.
-          </p>
-          <AnchorButton href="/publikasi/" variant="primary" size="lg">
-            Belajar Langsung
-          </AnchorButton>
-      </div>
-      <Image src={FlatWritting.src} width={200} height={200} alt="" className="w-full mt-5 lg:mt-0 lg:w-1/4 h-auto" />
+      <section className="flex justify-between items-center mt-20 px-8 lg:px-24">
+        <div className="flex max-w-xl flex-col gap-4">
+          <h1 className="text-primary text-3xl font-bold ">
+              Belajar Penulisan Karya Ilmiah dengan menulis langsung!
+            </h1>
+            <p>
+              Belajar menulis karya ilmiah dengan menulis langsung dan didukung dengan feedback AI.
+            </p>
+            <AnchorButton href="/belajar/" variant="primary" size="lg">
+              Belajar Langsung
+            </AnchorButton>
+        </div>
+      <Image src={FlatWritting.src} width={300} height={300} alt="" className="w-full mt-5 lg:mt-0 lg:w-2/5 h-auto" />
       </section>
     </>
   );
