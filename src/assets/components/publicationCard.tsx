@@ -27,10 +27,10 @@ export default function PublicationCard(props: Publication) {
           </h4>
           <p className="text-sm text-gray-600">{props.description}</p>
           <div className="flex w-full justify-between">
-            <p className="flex gap-1 items-center">
+            <p className="flex gap-4 items-center">
               <BsCalendar /> {format(props.closing_date, "dd-MM-yyyy")}
             </p>
-            <p className="flex gap-1 items-center">
+            <p className="flex gap-4 items-center">
               <BsClock /> {props.review_est} hari
             </p>
           </div>
