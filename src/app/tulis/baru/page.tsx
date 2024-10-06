@@ -1,10 +1,11 @@
 import RichTextEditor from "@/components/fraqments/richtext";
+import { actionSavePaper } from "@/model/paper";
 import { Button } from "flowbite-react";
 
 export default function Page() {
   return (
     <div className="p-16 w-full lg:w-3/4">
-      <form action="">
+      <form action={actionSavePaper}>
         <input
           type="text"
           className="border-none text-lg w-full placeholder:underline focus:outline-none focus:border-none"
