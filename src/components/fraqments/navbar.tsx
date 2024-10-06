@@ -16,10 +16,10 @@ export default function Navbar(): React.ReactNode {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <Image
-            width={100}
-            height={40}
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
+            width={150}
+            height={50}
+            src={WidyanayaLogo.src}
+            className="w-32"
             alt="Flowbite Logo"
           />
         </Link>
@@ -89,8 +89,13 @@ export default function Navbar(): React.ReactNode {
                 Belajar
               </a>
             </li>
-            <Link  href={"/auth/login"} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</Link>
-            
+            <Link
+              href={"/auth/login"}
+              type="button"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Login
+            </Link>
           </ul>
         </div>
       </div>
