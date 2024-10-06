@@ -33,7 +33,7 @@ export default async function Home() {
           <AnchorButton href="/publikasi/" variant="secondary" size="lg">
             Publikasi
           </AnchorButton>
-          <AnchorButton href="/tulis/" variant="primary" size="lg">
+          <AnchorButton href="/dashboard/" variant="primary" size="lg">
             Tulis Karya
           </AnchorButton>
           <AnchorButton href="/lomba/" variant="secondary" size="lg">

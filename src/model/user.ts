@@ -44,5 +44,5 @@ export async function actionRegister (formData: FormData):Promise<Response>{
     return {hasError: true, errorMsg: "Register error!"}
   } 
 
-  return {hasError: false, token: (await res.json()).token}
+  return {hasError: false, token: (await res.json()).data.token}
 }
