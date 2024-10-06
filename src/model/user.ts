@@ -9,7 +9,40 @@ interface User {
 }
 
 const loginURL = BASE_URL + "login"
+const registerURL = BASE_URL + "login"
 
-const actionLogin = () => {
+interface Response {
+  hasError: boolean;
+  errorMsg?: string; 
+  token?: string;
+}
 
+export async function actionLogin (formData: FormData):Promise<Response>{
+  const res = await fetch(loginURL, {
+    body: formData,
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "post"
+  })
+  if (res.status != 200){
+    return {hasError: true, errorMsg: "Login error! Check username or Password"}
+  } 
+
+  return {hasError: false, token: (await res.json()).token}
+}
+
+export async function actionRegister (formData: FormData):Promise<Response>{
+  const res = await fetch(loginURL, {
+    body: formData,
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "post"
+  })
+  if (res.status != 200){
+    return {hasError: true, errorMsg: "Register error!"}
+  } 
+
+  return {hasError: false, token: (await res.json()).token}
 }
