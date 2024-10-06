@@ -43,7 +43,7 @@ export default function Navbar(): React.ReactNode {
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
+              strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
@@ -51,7 +51,7 @@ export default function Navbar(): React.ReactNode {
         <div
           className={
             (isOpen ? "absolute" : "hidden") +
-            " w-full md:block md:w-auto top-16"
+            " w-full md:block md:w-auto top-16 left-0"
           }
           id="navbar-default"
         >
